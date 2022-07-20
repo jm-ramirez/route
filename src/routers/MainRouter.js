@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, NavLink, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, NavLink, BrowserRouter, Navigate } from 'react-router-dom';
 import { Index } from "../components/Index";
 import { Articles } from "../components/Articles";
 import { Contact } from "../components/Contact";
@@ -44,6 +44,9 @@ export const MainRouter = () => {
           <Route path='/articles' element={<Articles/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/person/:name/:lastName' element={<Person/>} />
+          <Route path='/person/:name/' element={<Person/>} />
+          <Route path='/person' element={<Person/>} />
+          <Route path='/redirect' element={<Navigate to='/persona/juanchi/ramirez'/>}></Route>
           <Route path='*' element={<Error />}/>
         </Routes>
       </section>
