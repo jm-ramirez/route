@@ -4,6 +4,7 @@ import { Index } from "../components/Index";
 import { Articles } from "../components/Articles";
 import { Contact } from "../components/Contact";
 import { Error } from "../components/Error";
+import { Person } from "../components/Person";
 
 export const MainRouter = () => {
   return (
@@ -27,6 +28,11 @@ export const MainRouter = () => {
               to='/contact'
               className={({isActive}) => isActive ? 'active' : ''}>Contacto</NavLink>
           </li>
+          <li>
+            <NavLink 
+              to='/person'
+              className={({isActive}) => isActive ? 'active' : ''}>Persona</NavLink>
+          </li>
         </ul>
       </nav>
       <h2>Menú</h2>
@@ -37,6 +43,7 @@ export const MainRouter = () => {
           <Route path='/index' element={<Index/>} />
           <Route path='/articles' element={<Articles/>} />
           <Route path='/contact' element={<Contact/>} />
+          <Route path='/person/:name/:lastName' element={<Person/>} />
           <Route path='*' element={<Error />}/>
         </Routes>
       </section>
