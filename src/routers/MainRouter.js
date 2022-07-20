@@ -13,13 +13,19 @@ export const MainRouter = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to='/index'>Inicio</NavLink>
+            <NavLink 
+              to='/index' 
+              className={({isActive}) => isActive ? 'active' : ''}>Inicio</NavLink>
           </li>
           <li>
-            <NavLink to='/articles'>Articulos</NavLink>
+            <NavLink
+              to='/articles'
+              className={({isActive}) => isActive ? 'active' : ''}>Articulos</NavLink>
           </li>
           <li>
-            <NavLink to='/contact'>Contacto</NavLink>
+            <NavLink 
+              to='/contact'
+              className={({isActive}) => isActive ? 'active' : ''}>Contacto</NavLink>
           </li>
         </ul>
       </nav>
